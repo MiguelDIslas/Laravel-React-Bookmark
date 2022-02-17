@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
       <div className="container">
-        <a className="navbar-brand" href="{{ url('/') }}">
+        <a className="navbar-brand" href={route("bookmarks.index")}>
           Bookmark
         </a>
         <button

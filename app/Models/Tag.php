@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Bookmark extends Model
+class Tag extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function tags()
+    public function bookmarks()
     {
-        return $this->morphToMany(Tag::class, 'taggable');
+        return $this->morphedBy(Bookmark::class, 'taggable');
     }
 }
